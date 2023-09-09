@@ -43,7 +43,8 @@ try:
     print(conn)
     print("connection successful...")
     #insertdb(conn,"Hari","Hari@gmail.com",'1234567890','Adarsh nagar','Faculty','Civil','1234567')
-    getdetails("Hari@gmail.com",'1234567')
+    insertdb(conn,"YASEEN","yaseenpasham@svit.ac.in",'9866504099','Vanasthalipuram','Faculty','CSE','123456')
+    getdetails("yaseenpasham@svit.ac.in",'123456')
     #showall()
 
 except:

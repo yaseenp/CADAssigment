@@ -37,13 +37,13 @@ def insertdb(conn,name,email,contact,address,role,branch,password):
     
     
 import ibm_db
-conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=b1bc1829-6f45-4cd4-bef4-10cf081900bf.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32304;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=rqy41363;PWD=9ozyrz3LXNz0Fwhv",'','')
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=fbd88901-ebdb-4a4f-a32e-9822b9fb237b.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32731;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=mwv02817;PWD=BGu2G7vYyF7JGCrq",'','')
 print(conn)
 print("connection successful...")
 
 @app.route('/')
 def index():
-    return render_template('registration.html')
+    return render_template('adminRegister.html')
 
 @app.route('/register', methods=['POST','GET'])
 def register():
