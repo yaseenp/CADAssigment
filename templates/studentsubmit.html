@@ -31,7 +31,7 @@
         <h2>Submit Assignment</h2>
         <form action="{{ url_for('studentsubmit')}}" method="post" enctype="multipart/form-data">
             <label for="assignment">Select Assignment:</label>
-            <select id="assignment" name="assignment" required>
+            <select id="assignment" name="assignment" required><br><br>
                 <!-- Populate this dropdown with assignment options -->
                 <option value="assignment1">Assignment 1</option>
                 <option value="assignment2">Assignment 2</option>
@@ -39,7 +39,7 @@
             </select>
 
             <label for="file">Choose File (PDF only):</label>
-            <input type="file" id="file" name="file" accept=".pdf" required>
+            <input type="file" id="file" name="file" accept=".pdf" required><br><br>
 
             <button type="submit">Submit Assignment</button>
         </form>
