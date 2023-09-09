@@ -29,7 +29,7 @@
 
     <section class="assignment-upload">
         <h2>Submit Assignment</h2>
-        <form action="submit_assignment.php" method="post" enctype="multipart/form-data">
+        <form action="{{ url_for('studentsubmit')}}" method="post" enctype="multipart/form-data">
             <label for="assignment">Select Assignment:</label>
             <select id="assignment" name="assignment" required>
                 <!-- Populate this dropdown with assignment options -->

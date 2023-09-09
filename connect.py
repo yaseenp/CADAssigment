@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Feb 15 13:58:50 2023
+Created on SAT SEP 21:50:15  2023
 
-@author: Shivani_SB
+@author: MYP
 """
 def showall():
     sql= "SELECT * from USER"
@@ -39,7 +39,7 @@ def insertdb(conn,name,email,contact,address,role,branch,password):
 
 try:
     import ibm_db
-    conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=b1bc1829-6f45-4cd4-bef4-10cf081900bf.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32304;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=rqy41363;PWD=9ozyrz3LXNz0Fwhv",'','')
+    conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=fbd88901-ebdb-4a4f-a32e-9822b9fb237b.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32731;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=mwv02817;PWD=BGu2G7vYyF7JGCrq",'','')
     print(conn)
     print("connection successful...")
     #insertdb(conn,"Hari","Hari@gmail.com",'1234567890','Adarsh nagar','Faculty','Civil','1234567')
@@ -48,6 +48,14 @@ try:
 
 except:
     print("Error connecting to the database")
+
+
+
+
+
+
+
+
 
 
 
