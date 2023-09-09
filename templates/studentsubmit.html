@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Assignments</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Submit Assignments</h1>
+    </header>
+
+    <section class="assignments-list">
+        <h2>Assignment List</h2>
+        <!-- Display a list of assignments here -->
+        <ul>
+            <li>
+                <span><strong>Assignment 1:</strong> Description of Assignment 1</span>
+                <span><strong>Due Date:</strong> January 15, 2024</span>
+            </li>
+            <li>
+                <span><strong>Assignment 2:</strong> Description of Assignment 2</span>
+                <span><strong>Due Date:</strong> February 1, 2024</span>
+            </li>
+            <!-- Add more assignments here -->
+        </ul>
+    </section>
+
+    <section class="assignment-upload">
+        <h2>Submit Assignment</h2>
+        <form action="submit_assignment.php" method="post" enctype="multipart/form-data">
+            <label for="assignment">Select Assignment:</label>
+            <select id="assignment" name="assignment" required>
+                <!-- Populate this dropdown with assignment options -->
+                <option value="assignment1">Assignment 1</option>
+                <option value="assignment2">Assignment 2</option>
+                <!-- Add more assignment options -->
+            </select>
+
+            <label for="file">Choose File (PDF only):</label>
+            <input type="file" id="file" name="file" accept=".pdf" required>
+
+            <button type="submit">Submit Assignment</button>
+        </form>
+    </section>
+
+    <section class="actions">
+        <h2>Actions</h2>
+        <ul>
+            <li><a href="contact.html">Contact Admin</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 College Name</p>
+    </footer>
+</body>
+</html>

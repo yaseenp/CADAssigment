@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Admin Registration</h1>
+    </header>
+    
+    <section class="registration-form">
+        <h2>Register Users</h2>
+        <form action="registration_process.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="student">Student</option>
+                <option value="professor">Professor</option>
+                <option value="admin">Admin</option>
+            </select>
+            
+            <!-- Additional fields based on the selected role (e.g., student ID, department) -->
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section class="actions">
+        <h2>Actions</h2>
+        <ul>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 College Name</p>
+    </footer>
+</body>
+</html>

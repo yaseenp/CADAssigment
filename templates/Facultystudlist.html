@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Student List</h1>
+    </header>
+
+    <section class="student-list">
+        <h2>List of Enrolled Students</h2>
+        <ul>
+            <!-- List of students enrolled in the course -->
+            <li><a href="#" onclick="showStudentSubmissions('student1')">Student 1</a></li>
+            <li><a href="#" onclick="showStudentSubmissions('student2')">Student 2</a></li>
+            <!-- Add more students here -->
+        </ul>
+    </section>
+
+    <section class="actions">
+        <h2>Actions</h2>
+        <ul>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 SVIT</p>
+    </footer>
+
+    <script>
+        function showStudentSubmissions(studentId) {
+            // Implement logic to fetch student submissions and redirect to facultymarks.html
+            // You may use a JavaScript framework or backend code to achieve this.
+            // For simplicity, a direct link to facultymarks.html is shown below.
+
+            window.location.href = `facultymarks.html?studentId=${studentId}`;
+        }
+    </script>
+</body>
+</html>

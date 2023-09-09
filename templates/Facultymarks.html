@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Marks</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Faculty Marks</h1>
+    </header>
+
+    <section class="student-submissions">
+        <h2>Student Submissions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Submission Date</th>
+                    <th>File</th>
+                    <th>Marks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate this table with student submissions -->
+                <tr>
+                    <td>Student 1</td>
+                    <td>January 15, 2024</td>
+                    <td><a href="download_link.pdf" target="_blank">Download</a></td>
+                    <td><input type="number" min="0" max="100"></td>
+                    <td><button onclick="submitMarks('student1')">Submit</button></td>
+                </tr>
+                <!-- Add more rows for other submissions -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="actions">
+        <h2>Actions</h2>
+        <ul>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 SVIT</p>
+    </footer>
+
+    <script>
+        function submitMarks(studentId) {
+            // Implement logic to submit marks and update the database
+            // You may use a JavaScript framework or backend code to achieve this.
+            // After submitting, update the marks column for both faculty and student.
+
+            // For simplicity, we'll update the table cell content here as an example.
+            const marksInput = document.querySelector(`input[data-student="${studentId}"]`);
+            const marksValue = marksInput.value;
+
+            // Update marks cell
+            const marksCell = document.querySelector(`td[data-student="${studentId}"]`);
+            marksCell.textContent = marksValue;
+
+            // Clear the input field
+            marksInput.value = '';
+
+            // You would typically send this data to the server and update the database.
+        }
+    </script>
+</body>
+</html>

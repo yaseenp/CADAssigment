@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Faculty Profile</h1>
+    </header>
+
+    <section class="faculty-list">
+        <h2>Faculty Members</h2>
+        <ul>
+            <!-- List of faculty members -->
+            <li><a href="#" onclick="showFacultyProfile('faculty1')">Faculty Member 1</a></li>
+            <li><a href="#" onclick="showFacultyProfile('faculty2')">Faculty Member 2</a></li>
+            <!-- Add more faculty members here -->
+        </ul>
+    </section>
+
+    <section class="faculty-profile" id="faculty-profile">
+        <!-- Faculty profile details will be displayed here -->
+    </section>
+
+    <section class="actions">
+        <h2>Actions</h2>
+        <ul>
+            <li><a href="contact.html">Contact Admin</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 College Name</p>
+    </footer>
+
+    <script>
+        function showFacultyProfile(facultyId) {
+            // You can fetch faculty details from a data source (e.g., API or database)
+            // and display them dynamically in the "faculty-profile" section.
+            const facultyProfile = document.getElementById('faculty-profile');
+
+            // Example faculty data (replace with actual data retrieval logic):
+            const facultyData = {
+                faculty1: {
+                    name: 'Faculty Member 1',
+                    email: 'faculty1@example.com',
+                    department: 'Computer Science',
+                    // Add more details as needed
+                },
+                faculty2: {
+                    name: 'Faculty Member 2',
+                    email: 'faculty2@example.com',
+                    department: 'Electrical Engineering',
+                    // Add more details as needed
+                },
+            };
+
+            // Display faculty profile data dynamically
+            if (facultyData[facultyId]) {
+                const faculty = facultyData[facultyId];
+                facultyProfile.innerHTML = `
+                    <h2>${faculty.name}</h2>
+                    <p><strong>Email:</strong> ${faculty.email}</p>
+                    <p><strong>Department:</strong> ${faculty.department}</p>
+                    <!-- Add more faculty details here -->
+                `;
+            } else {
+                facultyProfile.innerHTML = '<p>Faculty not found.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
